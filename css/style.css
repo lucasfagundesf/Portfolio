@@ -163,8 +163,7 @@ em {
 }
 
 h2 {
-    justify-self: left;
-   
+    text-align: center;
     color: var(--h2-color);
     font-size: 1.4rem;
     
