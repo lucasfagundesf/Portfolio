@@ -339,6 +339,9 @@ p {
     em  {
         font-size: 4rem;
     }
+    h2{
+        text-align: left;
+    }
     .profile-image {
         width: 30rem;
         height: 30rem;
