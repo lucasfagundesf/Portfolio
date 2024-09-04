@@ -16,6 +16,7 @@ export const Container = styled.div`
         border-top: 1px solid ${({ theme }) => theme.COLORS.PRIMARY};
         width: 100%;
         margin-top: 4.8rem;
+        padding-bottom: 3rem;
         
         a{
             text-decoration: none;

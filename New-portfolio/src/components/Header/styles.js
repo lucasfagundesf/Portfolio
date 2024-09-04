@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.header`
+    position: sticky;
     margin: auto;
     padding: 1rem ;
     display: flex;
@@ -9,7 +10,6 @@ export const Container = styled.header`
     width: 100%;
     height: 4rem;
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_GRAY};
-
     .logo{
         display: flex;
         justify-content: center;

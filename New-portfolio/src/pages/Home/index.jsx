@@ -30,7 +30,7 @@ export function Home() {
                     author={"- Monkey D. Luffy"}
                     icon={quote}
                 />
-                <section >
+                <section id="projetos" >
                     <h2><FaHashtag/>projects</h2>
                     <a href="">
                         view all 
@@ -72,7 +72,7 @@ export function Home() {
                         </div>
                     </div>
                 </section>
-                <section >
+                <section id="sobre">
                     <h2><FaHashtag/>about-me</h2>
                     <div className="skillsSection">
                         <div className="text">
@@ -93,7 +93,7 @@ export function Home() {
                         <img src={about} alt="" />
                     </div>
                 </section>
-                <section >
+                <section id="contato">
                     <h2><FaHashtag/>contacts</h2>
                     <div className="skillsSection">
                         <div className="text">

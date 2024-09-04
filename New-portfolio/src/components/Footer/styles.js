@@ -3,11 +3,20 @@ import styled from "styled-components";
 export const Container = styled.div`
     margin-top: 5rem;
     border-top: 1px solid ${({theme}) => theme.COLORS.FONT};
-    padding: 3.2rem;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+    padding: 3.2rem 3.2rem 2rem 3.2rem;
+    .media{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
 
+    }
+    p{
+
+        margin-top: 3rem;
+        color: ${({ theme }) => theme.COLORS.FONT};
+        font-size: 1.4rem;
+        text-align: center;
+    }
     h1{
         font-size: 1.6rem;
         color: ${({theme}) => theme.COLORS.TITLE};
