@@ -1,6 +1,9 @@
 import styled from "styled-components";
+import { DEVICE_BREAKPOINTS } from '../../styles/deviceBreakPoints'
 
 export const Container = styled.div`
+    display: flex;
+    flex-direction: column;
     width: 100%;
     max-width: 19.6rem;
     
@@ -18,4 +21,4 @@ export const Container = styled.div`
         padding: 0.8rem;
         font-size: 1.6rem;
     }
-`
+`;

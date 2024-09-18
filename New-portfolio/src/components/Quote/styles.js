@@ -1,6 +1,8 @@
 import styled from "styled-components";
+import { DEVICE_BREAKPOINTS } from '../../styles/deviceBreakPoints'
 
 export const Container = styled.div`
+    width: 90%;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -11,7 +13,7 @@ export const Container = styled.div`
     margin-bottom: 7rem;
     max-width: 70rem;
     color: ${({ theme }) => theme.COLORS.FONT};
-    
+
     img{
         width: 2rem;
         height: 2.5rem;
@@ -28,11 +30,15 @@ export const Container = styled.div`
         left: 15%;
         top: -8%;
     }
+    #quote2{
+        right: 3%;
+        bottom: 27%;
+    }
 
     > h2{
-        font-size: 2rem;
+        font-size: 1.8rem;
         font-weight: ${({ theme }) => theme.WEIGHT.MEDIUM};
-        padding: 3.2rem;
+        padding: 2.5rem;
         border: 1px solid ${({ theme }) => theme.COLORS.FONT};
         height: 9.5rem;
         max-width: 78rem;
@@ -47,8 +53,15 @@ export const Container = styled.div`
     p {
         font-size: 1.6rem;
     }
-    #quote2{
-        right: 3%;
-        bottom: 27%;
+    
+    @media (min-width: ${DEVICE_BREAKPOINTS.MD}) {
+
+    > h2{
+        padding: 3.2rem;
     }
+    p {
+        font-size: 1.6rem;
+    }
+    }
+    
 `;

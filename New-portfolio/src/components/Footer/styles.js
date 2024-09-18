@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+    position: relative;
+    bottom:0;
     margin-top: 5rem;
     border-top: 1px solid ${({theme}) => theme.COLORS.FONT};
     padding: 3.2rem 3.2rem 2rem 3.2rem;

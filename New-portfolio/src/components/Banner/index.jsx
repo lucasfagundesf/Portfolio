@@ -13,7 +13,7 @@ export function Banner({title,desc,}) {
                 />
             </div>
             <div className="perfil">
-                <img src={photo} alt="Ilustração de pessoa" id='person'/>
+                <div className="person"><img src={photo} alt="Ilustração de pessoa"/></div>
 
                     <div className='above'>
                         <div className='box'></div>

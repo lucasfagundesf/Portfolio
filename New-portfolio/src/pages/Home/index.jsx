@@ -1,4 +1,5 @@
-import { Container } from "./styles"
+import { useState } from "react";
+import { Container } from "./styles";
 import { Input } from "../../components/Input";
 import { List } from "../../components/List";
 import { Header } from "../../components/Header";
@@ -17,16 +18,23 @@ import about from "../../assets/about.png";
 import { FaHashtag } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { Footer } from "../../components/Footer";
+import { SideMenu } from "../../components/SideMenu";
 
 
 export function Home() {
+    const [menuIsOpen, setMenuIsOpen ] = useState(false);
+
     return (
         <Container>
-            <main>
-                <Header />
+            <main id="home">
+                <SideMenu 
+                    menuIsOpen={menuIsOpen}
+                    onCloseMenu={() => setMenuIsOpen(false)}
+                />
+                <Header onOpenMenu={() => setMenuIsOpen(true)} />
                 <Banner />
                 <Quote
-                    quote={"If you don't take risk, you can't creat a future"}
+                    quote={"Se você não correr riscos, não poderá criar um futuro"}
                     author={"- Monkey D. Luffy"}
                     icon={quote}
                 />
@@ -42,8 +50,25 @@ export function Home() {
                         title={"CherNodes"}
                         desc={"Minecraft servers hosting "}
                     />
+                    <Card
+                        img={proj}
+                        tags={"HTML CSS JS REACT"}
+                        title={"CherNodes"}
+                        desc={"Minecraft servers hosting "}
+                    />
+                    <Card
+                        img={proj}
+                        tags={"HTML CSS JS REACT"}
+                        title={"CherNodes"}
+                        desc={"Minecraft servers hosting "}
+                    /><Card
+                    img={proj}
+                    tags={"HTML CSS JS REACT"}
+                    title={"CherNodes"}
+                    desc={"Minecraft servers hosting "}
+                />
                 </section>
-                <section >
+                <section id="skill">
                     <h2><FaHashtag/>skills</h2>
                     <div className="skillsSection">
                         <img className="skills" src={skills} alt="" />
@@ -73,24 +98,24 @@ export function Home() {
                     </div>
                 </section>
                 <section id="sobre">
-                    <h2><FaHashtag/>about-me</h2>
+                    <h2><FaHashtag/>sobre mim</h2>
                     <div className="skillsSection">
                         <div className="text">
                             <p>
-                                Hello, i'm Lucas Fagundes!
+                                Olá, eu sou Lucas Fagundes!
                             </p>
                             <p>
-                                I’m a self-taught front-end developer based in Taubaté, Brazil. I can develop responsive websites from scratch and raise them into modern user-friendly web experiences.
+                            Sou um desenvolvedor front-end autodidata, moro em Taubaté, Brasil. Posso desenvolver sites responsivos do zero e transformá-los em experiências web modernas e amigáveis.
                             </p>
                             <p>
-                            Transforming my creativity and knowledge into a websites has been my passion for over a year. I have been helping various clients to establish their presence online. I always strive to learn about the newest technologies and frameworks.
+                            Transformar minha criatividade e conhecimento em sites tem sido minha paixão por mais de um ano. Sempre me esforço para aprender sobre as mais novas tecnologias e frameworks."
                             </p>
                             <Button 
-                                title={'Read more'}
+                                title={'Leia mais'}
                                 icon= {seta}
                             />
                         </div>
-                        <img src={about} alt="" />
+                        <img src={about} alt="" id="about" />
                     </div>
                 </section>
                 <section id="contato">
@@ -98,7 +123,7 @@ export function Home() {
                     <div className="skillsSection">
                         <div className="text">
                             <p >
-                                I’m interested in freelance opportunities. However, if you have other request or question, don’t hesitate to contact me
+                            Estou interessado em oportunidades de freelance. No entanto, se você tiver outro pedido ou pergunta, não hesite em entrar em contato comigo
                             </p>
                         </div>
                         <div className="message">

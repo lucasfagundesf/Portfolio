@@ -10,7 +10,6 @@ export function Quote({quote, author, icon}) {
             <h2>
                 {quote}
             </h2>
-            
             <div className="quote" id='quote2'>
                 <img src={icon} alt="icon Quote" />
             </div>

@@ -1,8 +1,10 @@
 import styled from "styled-components";
+import { DEVICE_BREAKPOINTS } from '../../styles/deviceBreakPoints'
 
 export const Container = styled.header`
     position: sticky;
-    margin: auto;
+    top: 0;
+    z-index: 2;
     padding: 1rem ;
     display: flex;
     align-items: center;
@@ -10,31 +12,39 @@ export const Container = styled.header`
     width: 100%;
     height: 4rem;
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_GRAY};
+    a{
+        text-decoration: none; 
+        font-size: 1.6rem;
+        color: ${({ theme }) => theme.COLORS.FONT};
+    }
+    li{
+        display: none;
+    }
+
     .logo{
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 8px;
+        gap: .8rem;
 
         img {
-            width: 16px;
-            height: 16px;
+            width: 1.6rem;
+            height: 1.6rem;
         }
         h1{
-            font-size: 1rem;
+            font-size: 1.6rem;
             font-weight: ${({ theme }) => theme.WEIGHT.BOLD};
             color: ${({ theme }) => theme.COLORS.TITLE};
         }
     }
-    
-    ul{
+
+    @media (min-width: ${DEVICE_BREAKPOINTS.MD}) {
+        
+        ul{
         display: flex;
         text-align: center;
-        justify-content: center;
-        gap: 3.2rem;
-        width: 400px;
-        font-size: 1.6rem;
-        color: ${({ theme }) => theme.COLORS.FONT};
+        justify-content: space-between;
+        gap: 3.2rem;        
         list-style: none;
 
         li {
@@ -49,10 +59,15 @@ export const Container = styled.header`
 
         
         }
-        li:hover{
+        li>a:hover{
             color: ${({ theme }) => theme.COLORS.TITLE};
             font-weight: ${({ theme }) => theme.WEIGHT.MEDIUM};
         }
         
     }
+        .menu{
+            display: none;
+        }
+    }
+   
 `;

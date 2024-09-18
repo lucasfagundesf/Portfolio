@@ -1,8 +1,11 @@
 import styled from "styled-components";
+import { DEVICE_BREAKPOINTS } from '../../styles/deviceBreakPoints';
+
 
 export const Container = styled.div`
     width: 100%;
     display: flex;
+    flex-direction: column;
     gap: 3rem;
     margin-top: 6rem ;
     justify-content: space-around;
@@ -11,15 +14,18 @@ export const Container = styled.div`
     .text{
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 3.4rem;
         max-width: 45rem;
         padding-left: 2rem;
+
+        h1,strong{
+            font-size: 3rem;
+            font-weight: ${({ theme }) => theme.WEIGHT.MEDIUM};
+        }
         h1{
-            font-size: 2.5rem;
             color: ${({ theme }) => theme.COLORS.TITLE};
         }
         strong{
-            font-size: 2.5rem;
             color: ${({ theme }) => theme.COLORS.PRIMARY};
         }
         p{
@@ -27,6 +33,7 @@ export const Container = styled.div`
             font-size: 1.6rem;
         }
         Button{
+            display: none;
             max-width: 17rem;
         }
         Button:hover{
@@ -34,18 +41,21 @@ export const Container = styled.div`
         }
     }
     .perfil{
-
-       img{
-            position: relative;
-            max-width: 35rem;
-                   
+        .person{
+            text-align: center;
+            img{
+               position: relative;
+               max-width: 35rem; 
+            }
+            
         }
         .above {
+            margin: auto;
+            width: 90%;
             display: flex;
             align-items: center;
             gap: 2rem;
-            
-            padding: .8rem 3rem;
+            padding: .8rem 2.5rem;
             border: 1px solid ${({ theme }) => theme.COLORS.FONT}
         }
         .box {
@@ -54,14 +64,27 @@ export const Container = styled.div`
                 height: 1.6rem;
             }
         p{       
-            font-size: 1.2rem;
+            font-size: 1.6rem;
             color: ${({ theme }) => theme.COLORS.FONT} ;
             strong{
                 color: ${({ theme }) => theme.COLORS.TITLE};
-                font-size: 1.2rem;
+                font-size: 1.6rem;
                 font-weight: ${({ theme }) => theme.WEIGHT.MEDIUM};
             }
         } 
     }
+
+    @media (min-width: ${DEVICE_BREAKPOINTS.MD}) {
+        flex-direction: row;
+
+        .perfil {
+            .above{
+                width: 100%;
+            }
+        }
+    
+    }
+
+    
     
 `;

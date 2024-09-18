@@ -11,7 +11,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-        <Contato />
+        <Home />
     </ThemeProvider>
   </React.StrictMode>
 )

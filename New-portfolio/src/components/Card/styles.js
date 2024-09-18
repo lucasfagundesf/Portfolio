@@ -1,6 +1,8 @@
 import styled from "styled-components";
+import { DEVICE_BREAKPOINTS } from '../../styles/deviceBreakPoints'
 
 export const Container = styled.div`
+    margin: auto;
     margin-top: 4.8rem;
     max-width: 30rem;
     color: ${({ theme }) => theme.COLORS.FONT};
@@ -58,5 +60,8 @@ export const Container = styled.div`
     }
     .btnGray:hover{
         background-color: ${({ theme }) => theme.COLORS.HOVER_GRAY};
+    }
+
+    @media (min-width: ${DEVICE_BREAKPOINTS.MD}) {
     }
 `;
