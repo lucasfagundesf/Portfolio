@@ -19,7 +19,7 @@ export const Container = styled.div`
         margin-top: 4.8rem;
         padding-bottom: 3rem;
         
-        a{
+        > a{
             text-decoration: none;
             padding: 2rem;
             background-color: ${({ theme }) => theme.COLORS.BACKGROUND_GRAY};
@@ -89,6 +89,7 @@ export const Container = styled.div`
             flex-wrap: wrap;
             justify-content: space-between;
             .skills{
+                display: none;
                 margin-top: 3rem;
                 margin-left: 5rem;
                 max-width: 34.9rem;
@@ -175,44 +176,13 @@ export const Container = styled.div`
         display: flex;
     }
     #projetos{        
-        flex-wrap: wrap;
-        a{
-            text-decoration: none;
-            padding: 2rem;
-            background-color: ${({ theme }) => theme.COLORS.BACKGROUND_GRAY};
-            top: -3.2rem;
-            right: 0;
-            position: absolute;
-            font-size: 1.6rem;
-            color: ${({ theme }) => theme.COLORS.TITLE};
-
-            .seta{
-                margin-left: 1rem;
-                max-width: 2rem;
-                max-height: 4.2rem;
-                color: ${({ theme }) => theme.COLORS.TITLE};
-            }
-        }
-        svg{
-            color: ${({ theme }) => theme.COLORS.PRIMARY};
-            max-width: 2rem;
-            max-height: 4.2rem;
-        }
-        > h2{
-            padding: 1rem;
-            background-color: ${({ theme }) => theme.COLORS.BACKGROUND_GRAY};
-            position: absolute;
-            top: -3rem;
-            color: ${({ theme }) => theme.COLORS.TITLE};
-            font-size: 2.6rem;
-            font-weight: ${({ theme }) => theme.WEIGHT.MEDIUM};
-        }
-        
+        gap: 3rem;
     } 
     #skill{
         .skillsSection{
             flex-wrap: nowrap;
-        .skills{     
+        .skills{  
+            display: block ;
             margin-left: 2rem;
         }
         .cardSkill{

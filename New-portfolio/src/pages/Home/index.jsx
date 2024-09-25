@@ -10,7 +10,9 @@ import { Button } from "../../components/Button";
 import { Banner } from "../../components/Banner";
 import { Skill } from "../../components/Skill";
 import quote from "../../assets/quote.svg";
-import proj from "../../assets/proj.png";
+import pomodoro from "../../assets/pomodoro.png";
+import pokedex from "../../assets/pokedex.png";
+import portfolio from "../../assets/portfolio.png";
 import viewMore from "../../assets/~~_.svg";
 import seta from "../../assets/seta.svg";
 import skills from "../../assets/skills.png";
@@ -19,6 +21,7 @@ import { FaHashtag } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { Footer } from "../../components/Footer";
 import { SideMenu } from "../../components/SideMenu";
+import { Link } from "react-router-dom";
 
 
 export function Home() {
@@ -40,33 +43,33 @@ export function Home() {
                 />
                 <section id="projetos" >
                     <h2><FaHashtag/>projects</h2>
-                    <a href="">
+                    <Link to="/projetos">
                         view all 
                         <img className="seta" src={viewMore} alt="seta" />
-                    </a>
-                    <Card
-                        img={proj}
-                        tags={"HTML CSS JS REACT"}
-                        title={"CherNodes"}
-                        desc={"Minecraft servers hosting "}
+                    </Link>
+                    <Card 
+                        img={portfolio}
+                        title={"Portfolio"}
+                        tags={"React StyledComponents "}
+                        desc={"É onde você está acessando agora"}
+                        href={"/home"}
                     />
-                    <Card
-                        img={proj}
-                        tags={"HTML CSS JS REACT"}
-                        title={"CherNodes"}
-                        desc={"Minecraft servers hosting "}
+                    <Card 
+                        img={pomodoro}
+                        title={"Focus Time"}
+                        tags={"HTML CSS JS"}
+                        href={"https://lucasfagundesf.github.io/focus-time2.0/"}
+                        href2={"https://github.com/lucasfagundesf/focus-time2.0"}
+                        desc={"timer pomodoro com sons ambientes"}
                     />
-                    <Card
-                        img={proj}
-                        tags={"HTML CSS JS REACT"}
-                        title={"CherNodes"}
-                        desc={"Minecraft servers hosting "}
-                    /><Card
-                    img={proj}
-                    tags={"HTML CSS JS REACT"}
-                    title={"CherNodes"}
-                    desc={"Minecraft servers hosting "}
-                />
+                    <Card 
+                        img={pokedex}
+                        title={"Pokedex"}
+                        tags={"HTML CSS JS "}
+                        href={`https://lucasfagundesf.github.io/Projeto-pokedex/`}
+                        href2={"https://github.com/lucasfagundesf/Projeto-pokedex"}
+                        desc={"A famosa pokedex com pokemons shinys"}
+                    />
                 </section>
                 <section id="skill">
                     <h2><FaHashtag/>skills</h2>
@@ -108,7 +111,7 @@ export function Home() {
                             Sou um desenvolvedor front-end autodidata, moro em Taubaté, Brasil. Posso desenvolver sites responsivos do zero e transformá-los em experiências web modernas e amigáveis.
                             </p>
                             <p>
-                            Transformar minha criatividade e conhecimento em sites tem sido minha paixão por mais de um ano. Sempre me esforço para aprender sobre as mais novas tecnologias e frameworks."
+                            Transformar minha criatividade e conhecimento em sites tem sido minha paixão por mais de um ano. Sempre me esforço para aprender sobre as mais novas tecnologias e frameworks.
                             </p>
                             <Button 
                                 title={'Leia mais'}

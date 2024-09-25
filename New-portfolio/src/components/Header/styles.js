@@ -37,6 +37,9 @@ export const Container = styled.header`
             color: ${({ theme }) => theme.COLORS.TITLE};
         }
     }
+    .menu{
+        display: block;
+    }
 
     @media (min-width: ${DEVICE_BREAKPOINTS.MD}) {
         
@@ -49,12 +52,16 @@ export const Container = styled.header`
 
         li {
             display: flex;
-            
+            align-items: center;
            svg {
-            width: 1rem;
-            height: 1rem;
-            margin-top: 1px;
+            width: 1.6rem;
+            height: 1.6rem;
             fill: ${({ theme }) => theme.COLORS.PRIMARY};
+
+            a{
+                display: flex;
+                align-items: center;
+            }
         } 
 
         

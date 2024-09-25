@@ -5,6 +5,7 @@ export const Container = styled.div`
     bottom:0;
     margin-top: 5rem;
     border-top: 1px solid ${({theme}) => theme.COLORS.FONT};
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_GRAY};
     padding: 3.2rem 3.2rem 2rem 3.2rem;
     .media{
         display: flex;

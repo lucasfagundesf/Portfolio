@@ -4,6 +4,7 @@ import logo from "../../assets/Logo.svg";
 import { Container, Header, Nav} from "./styles";
 import { Footer } from "../Footer";
 import { DarkMode } from "../DarkMode";
+import { Link } from "react-router-dom";
 
 export function SideMenu({menuIsOpen, onCloseMenu}) {
     return(
@@ -21,10 +22,10 @@ export function SideMenu({menuIsOpen, onCloseMenu}) {
                 }
             </Header>
             <Nav>
-                <a href="#home" onClick={onCloseMenu}><HiHashtag/>home</a>
-                <a href="#projetos" onClick={onCloseMenu}><HiHashtag/>projetos</a>
-                <a href="#sobre" onClick={onCloseMenu}><HiHashtag/>sobre-mim</a>
-                <a href="#contato" onClick={onCloseMenu}><HiHashtag/>contatos</a>
+                <Link to="/home" onClick={onCloseMenu}><HiHashtag/>home</Link>
+                <Link to="/projetos" onClick={onCloseMenu}><HiHashtag/>projetos</Link>
+                <Link to="/sobre" onClick={onCloseMenu}><HiHashtag/>sobre-mim</Link>
+                <Link to="/contatos" onClick={onCloseMenu}><HiHashtag/>contatos</Link>
             </Nav>
             <Footer/>
         </Container>

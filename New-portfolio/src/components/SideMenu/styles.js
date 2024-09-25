@@ -81,6 +81,7 @@ export const Header = styled.header`
 
 export const Nav = styled.nav`
     width: 90%;
+    height: 100%;
     margin: 3.6rem 1.9rem;
     padding: 1rem 0;
     

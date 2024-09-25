@@ -5,15 +5,24 @@ export const Container = styled.div`
     margin: auto;
     margin-top: 4.8rem;
     max-width: 30rem;
+    max-height: 42rem;
     color: ${({ theme }) => theme.COLORS.FONT};
     border: 1px solid ${({ theme }) => theme.COLORS.FONT};
 
+    a{
+        text-decoration: none;
+    }
+    .preview{
+        width:100%;
+        max-height: 20.1rem;
+    }
     img{
         width: 100%;
     }
     .tags{
         padding: .8rem 1.6rem;
         font-size: 1.6rem;
+        border-top: 1px solid;
         border-bottom: 1px solid;
     }
     
@@ -26,7 +35,6 @@ export const Container = styled.div`
         font-size: 2.4rem;
         font-weight: ${({ theme }) => theme.WEIGHT.MEDIUM};
         color: ${({ theme }) => theme.COLORS.TITLE};
-        padding-bottom: 1.6rem;
     }
     p{
         font-size: 1.6rem;
@@ -63,5 +71,7 @@ export const Container = styled.div`
     }
 
     @media (min-width: ${DEVICE_BREAKPOINTS.MD}) {
+        margin: 0;
+        margin-top: 4.8rem;
     }
 `;

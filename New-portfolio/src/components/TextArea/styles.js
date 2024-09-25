@@ -8,7 +8,7 @@ export const Container = styled.div`
    
     > label {
         position: absolute;
-        top: 50%; 
+        top: 15%; 
         left: 0.6rem;
         transform: translateY(-50%); 
         font-size: 1.6rem;
@@ -16,9 +16,9 @@ export const Container = styled.div`
         transition: all 0.2s ease; 
     }
 
-    > input {
+    > textarea {
         width: 100%;
-        height: 37px;
+        height: 11.9rem;
         border: 1px solid ${({ theme }) => theme.COLORS.FONT};
         color: ${({ theme }) => theme.COLORS.FONT};
         font-size: 1.6rem;
@@ -30,8 +30,8 @@ export const Container = styled.div`
     }
 
     /* Move o label quando o input está focado ou contém texto */
-    >input:focus ~ label,
-    >input:not(:placeholder-shown) ~ label{
+    >textarea:focus ~ label,
+    >textarea:not(:placeholder-shown) ~ label{
         top: -.1rem; 
         left: 0.6rem; 
         background-color: ${({ theme }) => theme.COLORS.BACKGROUND_GRAY};

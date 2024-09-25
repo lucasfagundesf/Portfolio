@@ -15,5 +15,7 @@ export const Container = styled.button`
         max-width: 1.6rem;
         color: ${({ theme }) => theme.COLORS.TITLE}
     }
+
+    
     
 `;
