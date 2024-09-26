@@ -12,19 +12,19 @@ import { Contatos } from './pages/Contatos';
 
 const router = createBrowserRouter ([
   {
-    path: "/src/pages/Home",
+    path: "/",
     element: <Home/>
   },
   {
-    path: "/src/pages/Projetos",
+    path: "/projetos",
     element: <Projetos/>
   },
   {
-    path: "/src/pages/Sobre",
+    path: "/sobre",
     element: <Sobre/>
   },
   {
-    path: "/src/pages/Contatos",
+    path: "/contatos",
     element: <Contatos/>
   }
 ]);
