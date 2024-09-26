@@ -20,9 +20,9 @@ export function Footer() {
                     <h1>Media</h1>
                     <div className="media">
                         <div className="icon">
-                            <a href="https://github.com/lucasfagundesf"><img src={github} alt="github icone" /></a>
-                            <a href="https://www.linkedin.com/in/lucasfagundesfranco/"><img src={linkedin} alt="linkedin icone" /></a>
-                            <a href="https://www.figma.com/@lucasfagundes"><img src={figma} alt="figma icone" /></a>
+                            <a href="https://github.com/lucasfagundesf" target="_blank"><img src={github} alt="github icone" /></a>
+                            <a href="https://www.linkedin.com/in/lucasfagundesfranco/" target="_blank"><img src={linkedin} alt="linkedin icone" /></a>
+                            <a href="https://www.figma.com/@lucasfagundes" target="_blank"><img src={figma} alt="figma icone" /></a>
                         </div>
                     </div>
                 </div>

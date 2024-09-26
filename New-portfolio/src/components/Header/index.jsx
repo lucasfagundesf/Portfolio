@@ -8,6 +8,9 @@ import { DropDown } from "../DropDown";
 import { DarkMode } from "../DarkMode"
 
 export function Header ({onOpenMenu}){
+    const scrollToTop = () => {
+        window.scrollTo(0, 0)
+    }
     return (
         <Container>
             
@@ -16,10 +19,10 @@ export function Header ({onOpenMenu}){
                 <h1>Lucas Fagundes</h1>
             </div>    
             <List> 
-                <li><HiHashtag /><Link to="/home">home</Link></li>
-                <li><HiHashtag /><Link to="/projetos">projetos</Link></li>
-                <li><HiHashtag /><Link to="/sobre">sobre mim</Link></li>
-                <li><HiHashtag /><Link to="/contatos">contatos</Link></li>
+                <li onClick={scrollToTop}><HiHashtag /><Link to="/">home</Link></li>
+                <li onClick={scrollToTop}><HiHashtag /><Link to="/projetos">projetos</Link></li>
+                <li onClick={scrollToTop}><HiHashtag /><Link to="/sobre">sobre mim</Link></li>
+                <li onClick={scrollToTop}><HiHashtag /><Link to="/contatos">contatos</Link></li>
             </List>
             <div className="menu" onClick={onOpenMenu}>
                 <img src={menu} alt="icone de menu" />

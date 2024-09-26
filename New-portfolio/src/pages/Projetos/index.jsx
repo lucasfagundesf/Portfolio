@@ -40,12 +40,6 @@ export function Projetos() {
                             tags={"React StyledComponents "}
                             desc={"É onde você está acessando agora"}
                         />
-                        <Card 
-                            img={portfolio}
-                            title={"Portfolio"}
-                            tags={"React StyledComponents "}
-                            desc={"É onde você está acessando agora"}
-                        />
                     </div>
                 </section>
                 <section id="small">

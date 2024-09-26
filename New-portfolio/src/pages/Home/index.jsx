@@ -27,6 +27,8 @@ import { Link } from "react-router-dom";
 export function Home() {
     const [menuIsOpen, setMenuIsOpen ] = useState(false);
 
+    
+
     return (
         <Container>
             <main id="home">
@@ -53,6 +55,7 @@ export function Home() {
                         tags={"React StyledComponents "}
                         desc={"É onde você está acessando agora"}
                         href={"/home"}
+                        href2={""}
                     />
                     <Card 
                         img={pomodoro}
@@ -113,10 +116,12 @@ export function Home() {
                             <p>
                             Transformar minha criatividade e conhecimento em sites tem sido minha paixão por mais de um ano. Sempre me esforço para aprender sobre as mais novas tecnologias e frameworks.
                             </p>
-                            <Button 
-                                title={'Leia mais'}
-                                icon= {seta}
-                            />
+                            <Link to={"/contatos"}>
+                                <Button
+                                    title={'Leia mais'}
+                                    icon= {seta}
+                                />
+                            </Link>
                         </div>
                         <img src={about} alt="" id="about" />
                     </div>

@@ -12,7 +12,7 @@ import { Contatos } from './pages/Contatos';
 
 const router = createBrowserRouter ([
   {
-    path: "/home",
+    path: "/",
     element: <Home/>
   },
   {

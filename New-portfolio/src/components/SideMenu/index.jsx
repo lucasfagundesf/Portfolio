@@ -7,6 +7,9 @@ import { DarkMode } from "../DarkMode";
 import { Link } from "react-router-dom";
 
 export function SideMenu({menuIsOpen, onCloseMenu}) {
+    const scrollToTop = () => {
+        window.scrollTo(0, 0)
+    }
     return(
         <Container data-menu-is-open={menuIsOpen}>
             <Header>
@@ -22,10 +25,10 @@ export function SideMenu({menuIsOpen, onCloseMenu}) {
                 }
             </Header>
             <Nav>
-                <Link to="/home" onClick={onCloseMenu}><HiHashtag/>home</Link>
-                <Link to="/projetos" onClick={onCloseMenu}><HiHashtag/>projetos</Link>
-                <Link to="/sobre" onClick={onCloseMenu}><HiHashtag/>sobre-mim</Link>
-                <Link to="/contatos" onClick={onCloseMenu}><HiHashtag/>contatos</Link>
+                <Link to="/" onClick={onCloseMenu && scrollToTop}><HiHashtag/>home</Link>
+                <Link to="/projetos" onClick={onCloseMenu && scrollToTop}><HiHashtag/>projetos</Link>
+                <Link to="/sobre" onClick={onCloseMenu && scrollToTop}><HiHashtag/>sobre-mim</Link>
+                <Link to="/contatos" onClick={onCloseMenu && scrollToTop}><HiHashtag/>contatos</Link>
             </Nav>
             <Footer/>
         </Container>

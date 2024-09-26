@@ -6,9 +6,10 @@ import { Input } from "../../components/Input";
 import { Footer } from "../../components/Footer";
 import { TextArea } from "../../components/TextArea";
 import { Button } from "../../components/Button";
-import barra from "../../assets/barra.svg"
-
+import barra from "../../assets/barra.svg";
+import Swal from 'sweetalert2';
 import emailjs from '@emailjs/browser';
+
 
 export function Contatos() {
     const [menuIsOpen, setMenuIsOpen ] = useState(false);
@@ -17,11 +18,44 @@ export function Contatos() {
     const [title, setTitle] = useState('');
     const [message, setMessage] = useState('');
 
+    function handleSuccess() {
+        Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Your work has been saved",
+            showConfirmButton: false,
+            animation: true,
+            timer: 1500,
+            color: '#ABB2BF',
+            background: '#2D3037'
+          });
+    }
+    function handleError(){
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong!",
+            animation: true,
+            color: '#ABB2BF',
+            background: '#2D3037'
+          });
+    }
+  
     function sendEmail(e){
         e.preventDefault();
 
         if(name === '' || email === '' || title === '' || message === ''){
-            alert("Preencha todos os campos");
+            Swal.fire({
+                title: "Está faltando dados!",
+                text: "Preencha todos os campos para enviar",
+                icon: "warning",
+                animation: true,
+                color: '#ABB2BF',
+                background: '#2D3037',
+                customClass: {
+                    confirmButton: 'myButton'
+                }
+              });
             return;
         }
 
@@ -36,17 +70,21 @@ export function Contatos() {
         
         emailjs.send("service_o2t8fyx", "template_btk75rl", templateParams, "rgGF_IUe3E5k3x_aL")
         .then((response) => {
-            alert("email enviado", response.status, response.text)
+            handleSuccess()
             setName('')
             setEmail('')
             setTitle('')
             setMessage('')
         }, (error) => {
-            console.log("Erro: ", error)
+            handleError()
+            setAlertError(true);
+            return;
         })
     }
     return(
+        
         <Container>
+            
             <main>
                 <SideMenu 
                     menuIsOpen={menuIsOpen}
@@ -56,7 +94,7 @@ export function Contatos() {
                 <section>
                 <div className="title">
                     <img src={barra} alt="icone de barra" />
-                    <h1>projetos</h1>
+                    <h1>entre em contato</h1>
                 </div>
                 </section>
                 <section id="formulario">
@@ -84,6 +122,7 @@ export function Contatos() {
                             value={message}
                         />
                         <input className="button" type="submit" value="Enviar"/>
+                        
                     </form>
                 </section>
                 <Footer/>

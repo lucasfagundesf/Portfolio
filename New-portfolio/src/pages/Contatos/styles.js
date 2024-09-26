@@ -1,15 +1,14 @@
 import styled from "styled-components";
+
 import { DEVICE_BREAKPOINTS } from '../../styles/deviceBreakPoints';
 
 export const Container = styled.div`
     width: 100%;
-    height: 100%;
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND};
 
     main{
         margin: auto;
         max-width: 100rem;
-        height: 100vh;
         background-color: ${({ theme }) => theme.COLORS.BACKGROUND_GRAY};
     }
     .title{
@@ -66,8 +65,6 @@ export const Container = styled.div`
     }
     
     @media (min-width: ${DEVICE_BREAKPOINTS.MD}){
-        .form{
-            margin-bottom: 21rem;
-        }
+
     }
 `;
