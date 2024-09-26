@@ -12,19 +12,19 @@ import { Contatos } from './pages/Contatos';
 
 const router = createBrowserRouter ([
   {
-    path: "https://lucasfagundesf.github.io/Portfolio/",
+    path: "/src/pages/Home",
     element: <Home/>
   },
   {
-    path: "/projetos",
+    path: "/src/pages/Projetos",
     element: <Projetos/>
   },
   {
-    path: "/sobre",
+    path: "/src/pages/Sobre",
     element: <Sobre/>
   },
   {
-    path: "/contatos",
+    path: "/src/pages/Contatos",
     element: <Contatos/>
   }
 ]);
