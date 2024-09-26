@@ -12,7 +12,7 @@ import { Contatos } from './pages/Contatos';
 
 const router = createBrowserRouter ([
   {
-    path: "/",
+    path: "https://lucasfagundesf.github.io/Portfolio/",
     element: <Home/>
   },
   {
