@@ -1,9 +1,6 @@
 import { useState } from "react";
 import { Container } from "./styles";
-import { Input } from "../../components/Input";
-import { List } from "../../components/List";
 import { Header } from "../../components/Header";
-import { DarkMode } from "../../components/DarkMode";
 import { Quote } from "../../components/Quote";
 import { Card } from "../../components/Card";
 import { Button } from "../../components/Button";
@@ -13,6 +10,7 @@ import quote from "../../assets/quote.svg";
 import pomodoro from "../../assets/pomodoro.png";
 import pokedex from "../../assets/pokedex.png";
 import portfolio from "../../assets/portfolio.png";
+import brendadotarot from "../../assets/Brendadotarot.png";
 import viewMore from "../../assets/~~_.svg";
 import seta from "../../assets/seta.svg";
 import skills from "../../assets/skills.png";
@@ -49,6 +47,13 @@ export function Home() {
             view all
             <img className="seta" src={viewMore} alt="seta" />
           </Link>
+          <Card
+            img={brendadotarot}
+            title={"Brenda Do tarot"}
+            tags={"Wordpress Elementor "}
+            desc={"Site de Taróloga com atendimento Online "}
+            href={"https://brendadotarot.com.br/"}
+          />
           <Card
             img={portfolio}
             title={"Portfolio"}
